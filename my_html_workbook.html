@@ -1,23 +1,8 @@
 <html>
 <head>
   <title>Arknights Official Concept Trailer 1</title>
-</head>
-<body>
-
-<h1>The form method="get" attribute</h1>
-
-<form class="main" id="1" action="https://www.w3schools.com/action_page.php" method="get" target="_blank">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" value="Submit">
-</form>
   
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uySJpmfM7q4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<h1>Geolocation
-<script>
+  <script>
 var x = document.getElementById("demo");
 function getLocation() {
   if (navigator.geolocation) {
@@ -31,9 +16,43 @@ function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude +
   "<br>Longitude: " + position.coords.longitude;
 }
+    
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
   
-getLocation();
 </script>
+</head>
+<body>
+
+<h1>Login</h1>
+
+<form class="main" id="1" action="https://www.w3schools.com/action_page.php" method="get" target="_blank">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uySJpmfM7q4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h1>Geolocation</h1>
+<script> getLocation(); </script>
+  
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
   
 </body>
 </html>
