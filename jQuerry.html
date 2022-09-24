@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Classwork 6</title>
+    <style>
+        
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function()
+    {
+      $("#button1").click(function()
+      {
+        $("#div1").fadeIn("slow");
+        $("#div0").animate({left: '600'});
+      });
+      $("#button2").click(function()
+      {
+        $("#div1").fadeOut("slow");
+        $("#div0").animate({left: '0'});
+      });
+
+        $("#button1").hover(function()
+        {
+           $("#button1").css('color', 'red');
+        },
+        function(){
+           $("#button1").css('color', 'blue'); 
+        });
+
+    });
+    </script>
+
+  </head>
+
+  <body>
+        <div id="div0" style="height:100px;width:100px;position:absolute;">
+          <button id="button1">I wish to subscribe</button>
+          <br><br>
+          <div id="div1" style="display:none;">
+              
+              <label for="emaillbl">Please enter your email:</label>
+              <input type="text" id="email" name="email">
+              <br></br>
+              <button id="button2">Nevermind i dont wish to subscribe</button>
+          </div>
+        </div>
+  </body>
+
+</html>
