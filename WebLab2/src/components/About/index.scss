@@ -1,0 +1,180 @@
+.stage-cube-cont {
+    width: 50%;
+    height: 100%;
+    top: 25%;
+    padding-top: 18%;
+    margin-left: 0;
+    position: absolute;
+    right: 25%;
+    overflow: hidden;
+  }
+  
+  .cubespinner {
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+    margin-left: calc(50% - 100px);
+  
+    div {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ccc;
+      background: rgba(216, 148, 255, 0.4);
+      text-align: center;
+      font-size: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 20px 0px rgb(212, 0, 255);
+    }
+  
+    .face1 {
+      transform: translateZ(100px);
+    }
+    .face2 {
+      transform: rotateY(90deg) translateZ(100px);
+    }
+    .face3 {
+      transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    }
+    .face4 {
+      transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+    }
+    .face5 {
+      transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+    }
+    .face6 {
+      transform: rotateX(-90deg) translateZ(100px);
+    }
+  }
+  
+  @keyframes spincube {
+    from,
+    to {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+      transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    33% {
+      transform: rotateY(-90deg) rotateX(90deg);
+    }
+    50% {
+      transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66% {
+      transform: rotateY(-270deg) rotateX(90deg);
+    }
+    83% {
+      transform: rotateX(90deg);
+    }
+  }
+  .about-me-head{
+		position: absolute;
+        left: 46.8%;
+        top: 20%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+		color: red;
+        font-size: 14px;
+        margin: 0;
+        font-family: 'Coolvetica';
+        font-weight: 400;
+  }
+  
+  .about-me-text{
+        position: absolute;
+        left: 30%;
+        top: 30%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+		color: #fff;
+        font-size: 16px;
+        margin: 0;
+        font-family: 'Coolvetica';
+        font-weight: 400;
+		animation: fadeIn 1s 1.9s backwards;
+  }
+  
+  .text-zone{
+  		position: absolute;
+        left: 46.4%;
+        top: 40%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+		color: red;
+        font-size: 14px;
+        margin: 0;
+        font-family: 'Coolvetica';
+        font-weight: 400;
+  }
+
+.contact-form {
+    width: 100%;
+    margin-top: 20%;
+	right: 24%;
+	position: absolute;
+	
+
+    ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: 0 5px;
+            margin: 0;
+            list-style: none;
+            margin-bottom: 10px;
+            overflow: hidden;
+            display: block;
+			
+            opacity: 0;
+            animation: fadeInUp 2s 2s;
+            animation-fill-mode: forwards;
+            left: 20px;
+			
+
+        }
+
+    }
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    border: 0;
+    background-color: rgb(59, 41, 75);
+    height: 70px;
+    font-size: 16px;
+    color: #DD0031;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    border: 0;
+    background: rgb(59, 41, 75);
+    height: 70px;
+    font-size: 16px;
+    color:#DD0031;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.flat-button {
+    color:#DD0031;
+    background: 0 0;
+    font: 11px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    padding: 25px 10px;
+    border: 1px solid #dd0031;
+    border-radius: 4px;
+}
